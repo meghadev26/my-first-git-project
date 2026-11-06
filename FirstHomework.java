@@ -1,24 +1,73 @@
 import java.util.Scanner;
+
 public class FirstHomework {
-    public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
-         int a = sc.nextInt();
-         int b = sc.nextInt();
-         int x = sc.nextInt();
+    public static void main(String args[]) {
 
-         int sum = a + b;
-         System.out.println(sum);
+       Scanner sc = new Scanner(System.in);
 
-         int diff = a - b;
-         System.out.println(diff);
+       int a = sc.nextInt();
 
-         int mul = a * b;
-         System.out.println(mul);
+       int b = sc.nextInt();
 
-         int div = a / b;
-         System.out.println(div);
+       int operator = sc.nextInt();
 
-         int modulo = a % b;
-         System.out.println(modulo);
-    }
+
+       /**
+
+        * 1 -> +
+
+        * 2 -> -
+
+        * 3 -> *
+
+        * 4 -> /
+
+        * 5 -> %
+
+        */
+
+
+       switch(operator) {
+
+           case 1 : System.out.println(a+b);
+
+           break;
+
+           case 2 : System.out.println(a-b);
+
+           break;
+
+           case 3 : System.out.println(a*b);
+
+           break;
+
+           case 4 : if(b == 0) {
+
+                       System.out.println("Invalid Division");
+
+                   } else {
+
+                       System.out.println(a/b);
+
+                   }
+
+            break;
+
+           case 5 :  if(b == 0) {
+
+                       System.out.println("Invalid Division");
+
+                   } else {
+
+                       System.out.println(a%b);
+
+                   }
+
+            break;
+
+           default : System.out.println("Invalid Operator");
+
+       }
+
+   }
 }
